@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Monoton&display=swap");
+/* HSL */
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  grid-template-rows: repeat(10, auto);
+  min-height: 100vh;
+  place-items: center;
+  opacity: .99;
+  background: linear-gradient(0.25turn, rgba(253, 196, 244, 0.8), rgba(247, 175, 248, 0.8), rgba(180, 137, 235, 0.8));
+}
+
+div {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+div:nth-child(even):hover span {
+  transform: scale(2.5);
+  transition: all .3s ease;
+  filter: drop-shadow(0 0 0.75rem white);
+  z-index: 100;
+}
+div:nth-child(odd):hover span {
+  transform: scale(5.5);
+  transition: all .6s ease;
+  filter: drop-shadow(0 0 0.75rem ivory);
+  z-index: 100;
+}
+
+span {
+  display: inline-block;
+  border-radius: 50%;
+  font-size: 4rem;
+  line-height: 1rem;
+  transition: transform 2.3s ease;
+  cursor: default;
+}
+
+div:nth-child(8n+1) > span {
+  color: rgba(120, 222, 247, 0.8);
+  transform: scale(0.8);
+}
+
+div:nth-child(8n+2) > span {
+  color: rgba(182, 142, 236, 0.8);
+  transform: scale(0.6);
+}
+
+div:nth-child(8n+3) > span {
+  color: rgba(120, 222, 247, 0.8);
+  transform: scale(0.8);
+}
+
+div:nth-child(8n+4) > span {
+  color: rgba(0, 133, 0, 0.8);
+  transform: scale(0.4);
+}
+
+div:nth-child(8n+5) > span {
+  color: rgba(247, 180, 248, 0.8);
+  transform: scale(0.1);
+}
+
+div:nth-child(8n+6) > span {
+  color: rgba(247, 180, 248, 0.8);
+  transform: scale(0.6);
+}
+
+div:nth-child(8n+7) > span {
+  color: rgba(253, 201, 245, 0.8);
+  transform: scale(0.8);
+}
+
+div:nth-child(8n+8) > span {
+  color: rgba(120, 222, 247, 0.8);
+  transform: scale(0.2);
+}
+
+.bg-cover {
+  z-index: 1000;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(253, 196, 244, 0.8);
+  backdrop-filter: blur(4px);
+}
+.bg-cover button {
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  border: none;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+  background: rgba(126, 146, 241, 0.8);
+  color: white;
+  font-family: 'Monoton', cursive;
+}
